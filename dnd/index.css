@@ -7,7 +7,7 @@
 
 /* MEDIA QUERIES */
 
-/* @media only screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) {
   #alignmentContainer {
     flex-direction: column;
     flex-flow: column;
@@ -18,7 +18,7 @@
   div.alignment h2 {
     text-align: left;
   }
-} */
+}
 
 /* HEADER STYLES */
 
