@@ -1,0 +1,305 @@
+/* IMPORT */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+/* font-family: 'Open Sans', sans-serif; */
+/* font-family: 'Open Sans Condensed', sans-serif; */
+
+/* LAYOUT ELEMENTS */
+
+header {
+  width: 100%;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+body {
+  margin: 2rem;
+  float: left;
+}
+
+article {
+  margin: 1rem 0rem;
+}
+
+div {
+  background: #f7f7f7;
+  margin: 1rem 0rem;
+  padding: 1rem;
+}
+
+/* div.modal {
+  background: #ffeff5;
+  padding: 2.25rem;
+  outline: 4px solid #ffeff5;
+  outline-offset: 8px;
+  margin: 2rem;
+} */
+
+/* NAVIGATION */
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  font-family: "Open Sans Condensed", sans-serif !important;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+}
+
+/* FONT STYLES */
+
+* {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
+*:first-child {
+  padding-top: 0;
+}
+
+*:last-child {
+  padding-bottom: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.75rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 300;
+}
+
+ul {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  /* list-style: none; */
+  padding-left: 2rem;
+}
+
+/* ul li::before {
+  content: "\27e1";
+  color: #ff0066;
+  font-weight: 500;
+  display: inline-block;
+  width: 1.25rem;
+  margin-left: -1rem;
+} */
+
+ol {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  padding-left: 2rem;
+}
+
+li {
+  padding-bottom: 0.5rem;
+}
+
+a {
+  color: #9d0a0e;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #fff;
+  background-color: #9d0a0e;
+}
+
+a:active {
+  color: #fff;
+  background-color: #000;
+}
+
+/* FLEXBOXEN */
+
+#alignmentContainer {
+  /* display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start; */
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.alignment {
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #000;
+  /* width: 25%; */
+}
+
+.alignment h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  /* margin: 0rem; */
+}
+
+.alignment p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  /* margin-bottom: .5rem; */
+}
+
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
+}
+
+/* I COPIED THIS HR CODE VERBATIM FROM THE DND WEBSITE CAUSE I'M SNEAKY MWAHAHA */
+
+h1::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(157, 10, 14, 0),
+    #9d0a0e,
+    #9d0a0e,
+    rgba(157, 10, 14, 0)
+  );
+}
+
+/* OTHER DESIGN ELEMENTS */
+
+.caption {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #666;
+}
+
+blockquote {
+  font-size: 1.25rem;
+  font-weight: 400;
+  vertical-align: middle;
+  padding: 0 0 0 0.75rem;
+  border-left: 0.5rem solid #9d0a0e;
+  color: #000;
+}
+
+/* BUTTONPALOOZA */
+
+.btn {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #fff;
+  background: #9d0a0e;
+  border: none;
+  height: 2.75rem;
+  padding: 0.5rem 1.25rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #000;
+}
+
+.btn:active {
+  color: #fff;
+  background: #660029;
+}
+
+.btn:disabled {
+  color: #666;
+  background: #e5e5e5;
+}
+
+#btnTop {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #fff;
+  background: #9d0a0e;
+  border: none;
+  height: 2.75rem;
+  padding: 0.5rem 1.25rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+#btnTop:hover {
+  color: #fff;
+  background: #000;
+}
+
+#btnTop:active {
+  color: #fff;
+  background: #660029;
+}
+
+#btnTop:disabled {
+  color: #666;
+  background: #e5e5e5;
+}
