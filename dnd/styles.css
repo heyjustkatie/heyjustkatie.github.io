@@ -15,17 +15,37 @@ header {
 
 body {
   margin: 2rem;
-  float: left;
+  align-content: center;
+  max-width: 960px;
 }
 
-article {
-  margin: 1rem 0rem;
+#contentContainer {
+  display: flex;
+  padding: 1rem;
+  margin: 0;
+}
+
+.sideNav {
+  flex-basis: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  flex-basis: 3p;
+  padding: 0;
+  margin: 0;
 }
 
 div {
   /* background: #f7f7f7; */
-  margin: 1rem 0rem;
+  margin: 0rem;
   padding: 1rem;
+}
+
+article {
+  margin: 0;
+  padding: 0;
 }
 
 /* div.modal {
@@ -51,8 +71,8 @@ nav li {
   display: inline-block;
   font-family: "Open Sans Condensed", sans-serif !important;
   text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 1rem;
+  padding: 0;
+  margin: 1rem;
 }
 
 /* FONT STYLES */
@@ -61,16 +81,12 @@ nav li {
   font-family: "Open Sans", sans-serif;
   color: #333;
   margin: 0;
-  padding: 0.5rem 0;
+  padding-bottom: 1rem;
 }
 
-/* *:first-child {
-  padding-top: 0;
+a {
+  padding-bottom: 0 !important;
 }
-
-*:last-child {
-  padding-bottom: 0;
-} */
 
 h1 {
   font-size: 3rem;
