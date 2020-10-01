@@ -14,9 +14,12 @@ header {
 }
 
 body {
-  margin: 2rem;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   max-width: 960px;
+  margin: auto;
 }
 
 #contentContainer {
