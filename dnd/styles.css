@@ -5,77 +5,74 @@
 /* font-family: 'Open Sans', sans-serif; */
 /* font-family: 'Open Sans Condensed', sans-serif; */
 
-/* LAYOUT ELEMENTS */
+/* LAYOUT */
 
-header {
-  width: 100%;
-  padding-bottom: 0;
-  text-align: center;
-}
+/* THIS IS ME TRYING TO RECREATE THE HOLYGRAIL FLEXBOX */
 
-body {
+.dnd {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  max-width: 960px;
+  max-width: 940px;
   margin: auto;
 }
 
-#contentContainer {
+.dndHeader {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
-  margin: 0;
 }
 
-.sideNav {
-  flex-basis: 1;
-  padding: 0;
-  margin: 0;
+.siteInfo {
+  display: flex;
+  align-items: center;
+  flex: none;
 }
 
-.main {
-  flex-basis: 3p;
-  padding: 0;
-  margin: 0;
+.siteTitle {
+  padding-left: 1.5rem;
 }
 
-div {
-  /* background: #f7f7f7; */
-  margin: 0rem;
+.dndBody {
+  display: flex;
+  flex-direction: row;
+  padding: 1 rem;
+}
+
+.dndNav {
+  flex: none;
+  padding: 1rem 0rem;
+  width: 20%;
+}
+
+.dndContent {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
 }
 
 article {
+  padding: 0 0 2rem 0;
   margin: 0;
-  padding: 0;
 }
 
-/* div.modal {
-  background: #ffeff5;
-  padding: 2.25rem;
-  outline: 4px solid #ffeff5;
-  outline-offset: 8px;
-  margin: 2rem;
-} */
-
-/* NAVIGATION */
-
-nav {
+div {
   padding: 0;
   margin: 0;
 }
 
-nav ul {
-  padding: 0;
+.dndFooter {
+  display: flex;
+  flex: row wrap;
+  justify-content: space-around;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: solid #9d0a0e 1px;
 }
 
-nav li {
-  display: inline-block;
-  font-family: "Open Sans Condensed", sans-serif !important;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 1rem;
+.footerItem {
+  padding: 0 1rem;
 }
 
 /* FONT STYLES */
@@ -83,30 +80,30 @@ nav li {
 * {
   font-family: "Open Sans", sans-serif;
   color: #333;
-  margin: 0;
-  padding-bottom: 1rem;
-}
-
-a {
-  padding-bottom: 0 !important;
 }
 
 h1 {
   font-size: 3rem;
   line-height: 3.75rem;
   font-weight: 800;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 h2 {
   font-size: 2.25rem;
   line-height: 2.625rem;
   font-weight: 700;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 h4 {
@@ -115,12 +112,16 @@ h4 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-weight: 400;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 p {
   font-size: 1.125rem;
   line-height: 1.825rem;
   font-weight: 300;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 ul {
@@ -132,13 +133,13 @@ ul {
 }
 
 /* ul li::before {
-  content: "\27e1";
-  color: #ff0066;
-  font-weight: 500;
-  display: inline-block;
-  width: 1.25rem;
-  margin-left: -1rem;
-} */
+    content: "\27e1";
+    color: #ff0066;
+    font-weight: 500;
+    display: inline-block;
+    width: 1.25rem;
+    margin-left: -1rem;
+  } */
 
 ol {
   font-size: 1rem;
@@ -155,6 +156,7 @@ a {
   color: #9d0a0e;
   text-decoration: underline;
   font-weight: 500;
+  padding-bottom: 0;
 }
 
 a:hover {
@@ -167,25 +169,116 @@ a:active {
   background-color: #000;
 }
 
-/* FLEXBOXEN */
+/* NAV STYLES */
 
-#alignmentContainer {
+.dndNav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dndNav li {
+  padding-bottom: 1rem;
+}
+
+.dndNavItem a {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.25rem;
+  padding-bottom: 0;
+  margin: 0 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.dndNavItem a:hover {
+  color: #fff;
+  background-color: #9d0a0e;
+}
+
+.dndNavItem a:active {
+  color: #fff;
+  background-color: #000;
+}
+
+.dndSubNav li {
+  padding: 0.5rem 0;
+}
+
+.dndSubNavParent::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0d7";
+  padding-left: 1rem;
+  padding-right: 5px;
+}
+
+.dndSubNav a {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.dndSubNav li:last-child {
+  padding-bottom: 0;
+}
+
+/* FOOTER STYLES */
+
+footer p,
+footer a,
+footer li {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* FA STYLES */
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-discord {
+  /* color: #9d0a0e; */
+  padding-right: 10px;
+}
+
+/* .fa-discord:hover,
+.fa-discord:active {
+  color: #fff;
+} */
+
+.fa-caret-down,
+.fa-caret-up {
+  color: #9d0a0e;
+  align-self: right;
+}
+
+/* ALIGNMENT FLEXBOXEN */
+
+.alignmentContainer {
   /* display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: flex-start; */
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start; */
   padding: 0;
   margin: 0;
 }
 
-.row {
+.alignmentRow {
   display: flex;
   flex-flow: row wrap;
   padding: 0;
   margin: 0;
 }
 
-.column {
+.alignmentColumn {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -200,7 +293,7 @@ a:active {
   /* width: 25%; */
 }
 
-.alignment h3 {
+.alignment h4 {
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
   font-size: 1.125em;
@@ -218,14 +311,67 @@ a:active {
 }
 
 @media screen and (min-width: 800px) {
-  .column {
+  .alignmentColumn {
     flex: 1;
   }
 }
 
+/* DICE ROLLER FLEXBOXEN */
+
+.dice {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 560px;
+}
+
+.roll {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rollButton {
+  padding-right: 3rem;
+}
+
+.rollResponse {
+  vertical-align: middle;
+  border: solid 1px #9d0a0e;
+}
+
+.rollResponse p {
+  font-weight: 700;
+  margin: 0.5rem 1rem;
+  padding-bottom: 0;
+}
+
+#d4rollResponse,
+#d6rollResponse,
+#d8rollResponse,
+#d10rollResponse,
+#d12rollResponse,
+#d20rollResponse {
+  vertical-align: middle;
+  border: solid 1px #9d0a0e;
+}
+
+#d4rollResponse p,
+#d6rollResponse p,
+#d8rollResponse p,
+#d10rollResponse p,
+#d12rollResponse p,
+#d20rollResponse p {
+  font-weight: 700;
+  margin: 0.5rem 1rem;
+  padding-bottom: 0;
+}
+
 /* I COPIED THIS HR CODE VERBATIM FROM THE DND WEBSITE CAUSE I'M SNEAKY MWAHAHA */
 
-h1::after {
+h2:after {
   content: "";
   display: block;
   height: 2px;
@@ -266,7 +412,7 @@ blockquote {
   text-transform: uppercase;
   vertical-align: middle;
   color: #fff;
-  background: #9d0a0e;
+  background: #333;
   border: none;
   height: 2.75rem;
   padding: 0.5rem 1.25rem;
@@ -275,17 +421,127 @@ blockquote {
 
 .btn:hover {
   color: #fff;
-  background: #000;
+  background: #9d0a0e;
 }
 
 .btn:active {
   color: #fff;
-  background: #660029;
+  background: #000;
 }
 
 .btn:disabled {
   color: #666;
   background: #e5e5e5;
+}
+
+.btn.secondary {
+  color: #9d0a0e;
+  background: transparent;
+  outline: 2px solid #9d0a0e;
+  outline-offset: -2px;
+}
+
+.btn.secondary:hover {
+  color: #fff;
+  background: #9d0a0e;
+  outline: none;
+}
+
+.btn.secondary:active {
+  color: #fff;
+  background: #000;
+  outline: none;
+}
+
+.btn.secondary:disabled {
+  color: #666;
+  background: #e5e5e5;
+  outline: none;
+}
+
+.btn.success {
+  color: #000;
+  background: #b9ffb7;
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+
+.btn.success::before {
+  content: "\2713";
+  margin-right: 0.25rem;
+}
+
+.btn.success:hover {
+  color: #fff;
+  background: #049c00;
+}
+
+.btn.success:active {
+  color: #049c00;
+  background: #fff;
+  outline: 2px solid #049c00;
+  outline-offset: -4px;
+}
+
+.btn.success:disabled {
+  color: #666;
+  background: #e5e5e5;
+  outline: none;
+}
+
+.btn.warning {
+  color: #000;
+  background: #f19a3e;
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+
+.btn.warning::before {
+  content: "\26A0";
+  margin-right: 0.25rem;
+}
+
+.btn.warning:hover {
+  color: #fff;
+  background: #9b3c00;
+}
+
+.btn.warning:active {
+  color: #9b3c00;
+  background: #fff;
+  outline: 2px solid #9b3c00;
+  outline-offset: -4px;
+}
+
+.btn.cta {
+  color: #fff;
+  background: #9d0a0e;
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+
+.btn.cta::after {
+  content: "\203A";
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.btn.cta:hover {
+  color: #000;
+  background: #9d0a0e;
+  outline: none;
+}
+
+.btn.cta:active {
+  color: #fff;
+  background: #000;
+  outline: none;
+}
+
+.btn.cta:disabled {
+  color: #666;
+  background: #e5e5e5;
+  outline: none;
 }
 
 #btnTop {

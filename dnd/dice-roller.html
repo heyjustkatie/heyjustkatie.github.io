@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7d14e0ec9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Dice Roller | D&amp;D for Beginners</title>
+  </head>
+  <body class="dnd">
+    <header class="dndHeader">
+      <div class="siteInfo">
+        <div class="siteLogo">
+          <img
+            src="images/dnd-beginners-logo.png"
+            alt="DnD for Beginners Logo"
+            width="100px"
+          />
+        </div>
+        <div class="siteTitle">
+          <h1>D&amp;D for Beginners</h1>
+        </div>
+      </div>
+      <div class="discordLogin">
+        <button class="btn secondary" disabled>
+          <i class="fab fa-discord"></i>LOGIN
+        </button>
+      </div>
+    </header>
+    <main class="dndBody">
+      <nav class="dndNav">
+        <ul>
+          <li class="dndNavItem">
+            <a href="index.html">About D&amp;D</a>
+          </li>
+          <li class="dndNavItem">
+            <a href="alignments.html">Alignments</a>
+          </li>
+          <li class="dndNavItem">
+            <a href="alignment-quiz.html">Alignment Quiz</a>
+          </li>
+          <li class="dndNavItem">
+            <a href="dice-roller.html">Dice Roller</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="dndContent">
+        <article id="diceRoller">
+          <h2>Dice Roller</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos minima
+            delectus asperiores quia fugit velit libero cumque. Dolore ad,
+            fugiat fuga laboriosam eligendi, voluptates eveniet minus atque
+            reiciendis quia repudiandae?
+          </p>
+        </article>
+        <article id="d4">
+          <div class="dice">
+            <div class="diceItem">
+              <h3>d4</h3>
+              <p>This will be a flex box I think</p>
+            </div>
+            <div class="diceImg">
+              <img src="images/dice/d4.png" alt="d4 die" width="70px" />
+            </div>
+          </div>
+          <div class="roll">
+            <div class="rollButton">
+              <button class="btn" onclick="roll1d4()">Roll 1d4</button>
+            </div>
+            <div id="d4rollResponse" style="display: none">
+              <p id="d4Response"></p>
+            </div>
+          </div>
+        </article>
+        <article id="d6">
+          <div class="dice">
+            <div class="diceItem">
+              <h3>d6</h3>
+              <p>This will be a flex box I think</p>
+            </div>
+            <div class="diceImg">
+              <img src="images/dice/d6.png" alt="d6 die" width="70px" />
+            </div>
+          </div>
+          <div class="roll">
+            <div class="rollButton">
+              <button class="btn" onclick="roll1d6()">Roll 1d6</button>
+            </div>
+            <div id="d6rollResponse" style="display: none">
+              <p id="d6Response"></p>
+            </div>
+          </div>
+        </article>
+        <article id="d8">
+          <div class="dice">
+            <div class="diceItem">
+              <h3>d8</h3>
+              <p>This will be a flex box I think</p>
+            </div>
+            <div class="diceImg">
+              <img src="images/dice/d8.png" alt="d8 die" width="70px" />
+            </div>
+          </div>
+          <div class="roll">
+            <div class="rollButton">
+              <button class="btn" onclick="roll1d8()">Roll 1d8</button>
+            </div>
+            <div id="d8rollResponse" style="display: none">
+              <p id="d8Response"></p>
+            </div>
+          </div>
+        </article>
+        <article id="d10">
+          <div class="dice">
+            <div class="diceItem">
+              <h3>d10</h3>
+              <p>This will be a flex box I think</p>
+            </div>
+            <div class="diceImg">
+              <img src="images/dice/d10.png" alt="d10 die" width="70px" />
+            </div>
+          </div>
+          <div class="roll">
+            <div class="rollButton">
+              <button class="btn" onclick="roll1d10()">Roll 1d10</button>
+            </div>
+            <div id="d10rollResponse" style="display: none">
+              <p id="d10Response"></p>
+            </div>
+          </div>
+        </article>
+        <article id="d12">
+          <div class="dice">
+            <div class="diceItem">
+              <h3>d12</h3>
+              <p>This will be a flex box I think</p>
+            </div>
+            <div class="diceImg">
+              <img src="images/dice/d12.png" alt="d12 die" width="70px" />
+            </div>
+          </div>
+          <div class="roll">
+            <div class="rollButton">
+              <button class="btn" onclick="roll1d12()">Roll 1d12</button>
+            </div>
+            <div id="d12rollResponse" style="display: none">
+              <p id="d12Response"></p>
+            </div>
+          </div>
+        </article>
+        <article id="d20">
+          <div class="dice">
+            <div class="diceItem">
+              <h3>d20</h3>
+              <p>This will be a flex box I think</p>
+            </div>
+            <div class="diceImg">
+              <img src="images/dice/d20.png" alt="d20 die" width="70px" />
+            </div>
+          </div>
+          <div class="roll">
+            <div class="rollButton">
+              <button class="btn" onclick="roll1d20()">Roll 1d20</button>
+            </div>
+            <div id="d20rollResponse" style="display: none">
+              <p id="d20Response"></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="dndFooter">
+      <div class="footerItem">
+        <a href="about-us.html">About Us</a>
+      </div>
+      <div class="footerItem">
+        <a href="https://dnd.wizards.com/">Official D&amp;D site</a>
+      </div>
+      <div class="footerItem">
+        <a href="https://www.dndbeyond.com/">D&amp;D Beyond</a>
+      </div>
+      <div class="footerItem">
+        <a href="https://roll20.net//">Roll20</a>
+      </div>
+      <div class="footerItem">
+        <a href="credits.html">Credits</a>
+      </div>
+    </footer>
+    <!-- JS STUFFS-->
+    <button onclick="topFunction()" id="btnTop" title="Go to top">Top</button>
+    <script src="script.js"></script>
+  </body>
+</html>
