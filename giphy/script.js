@@ -15,7 +15,6 @@ limit.oninput = function() {
 
 gifBtn.onclick = getGiphyResults;
 
-// I FOUND THIS ON STACK OVERFLOW BECAUSE MY FORM KEPT RESETTING AND SO THE IMAGES NEVER ACTUALLY POPULATED
 
 var form = document.getElementById("gifForm");
 function handleForm(event) { event.preventDefault(); } 
@@ -26,6 +25,7 @@ function getGiphyResults(){
   var ratingValue = document.getElementById("gifForm").elements[1].value;
   var limitValue = document.getElementById("gifForm").elements[2].value;
   var url = api + "&q=" + searchValue + "&limit=" + limitValue + "&offset=0&rating=" + ratingValue + "&lang=en";
+  gifsContainer.innerHTML ="";
   fetch(url)
     .then((response) => {
       return response.json()
@@ -38,7 +38,7 @@ function getGiphyResults(){
 function renderGiphys(giphys) {
   for(let i = 0; i<giphys.length; i++){
     let imgSrc = giphys[i].images.original.url;
-    let imgAlt = giphys[i].images.title;
+    let imgAlt = giphys[i].title;
     let imgEle = document.createElement('img');
     gifsContainer.appendChild(imgEle);
     imgEle.setAttribute('src', imgSrc);
