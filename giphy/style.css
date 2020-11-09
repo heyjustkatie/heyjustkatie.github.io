@@ -7,11 +7,10 @@
 /* font-family: 'Roboto Condensed', sans-serif; */
 /* font-family: 'Roboto Slab', serif; */
 
-/* SITE STY:ES */
+/* SITE STYLES */
 
 body {
   background-color: #ffeff5;
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,7 +186,6 @@ hr {
   padding: 0.5rem;
 }
 
-.attribute {
-  position: absolute;
-  bottom: 1rem;
+footer {
+  margin-top: 3rem;
 }
